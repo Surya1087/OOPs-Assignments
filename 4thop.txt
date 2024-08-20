@@ -1,0 +1,29 @@
+==============MENU===============
+        1. Triangle 
+        2.Rectangle
+
+Enter your choice
+1
+=======For Triangle======
+Enter dimension 'base' of shape triangle: 
+10
+Enter dimension 'height' of shape triangle:
+10
+Area of triangle is: 50.0
+
+
+
+
+
+==============MENU===============
+        1. Triangle 
+        2.Rectangle
+
+Enter your choice
+2
+=======For Rectangle======
+Enter dimension 'base' of shape rectangle : 
+10
+Enter dimension 'height' of shape rectangle:
+10
+Area of rectangle is:100.0
