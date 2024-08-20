@@ -1,0 +1,12 @@
+Program to show arithmetic operations on two complex numbers
+Enter real part:
+1
+Enter imaginary part 1:
+1
+Enter real part 2:
+2
+Enter imaginary part 2:
+2
+Sum of two complex number is:3+3i
+Difference of two complex number is:-1+-1i
+Product  of two complex number is:0+0i
