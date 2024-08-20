@@ -1,0 +1,114 @@
+ CHOOSE ONE OF THE FOLLOWING
+
+        1.BOOKS                 2.MAZGZINE
+choose: 
+1
+
+
+CHOOSE ON EOF TE FOLLOWING
+
+        1.READ BOOK                     2.DISPLAY BOOK      3.SALE COPIES
+CHOOSE: 
+1
+---------------------------------------------------------------------------------
+
+enter title 
+abc
+enter price of book
+500
+enter copies of books
+25
+enter the name of author of book 
+adam
+enetr the no. of copies ordered
+20
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+the title of book is:  abc
+the price of book is: 500.0
+No. of copies of books available are: 25.0
+the name of author is: adam
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+total price of copies issued is: 10000.0
+the total sale of publication is 20
+remaining stock of book is:5.0
+---------------------------------------------------------------------------------
+
+invalid
+
+
+DO YOU WANT TO CONTINUE WITH BOOK SECTION[1/0]
+                1. YES                  2.NO
+CHOOSE:
+2
+DO YOU WANT TO CONTINUE WITH PUBLICATION???
+        1.CONTINUE      0.TERMINATE
+1
+
+
+ CHOOSE ONE OF THE FOLLOWING
+
+        1.BOOKS                 2.MAZGZINE
+choose: 
+2
+
+                MENU   FOR   MAGAZINE...
+
+        1.read magzine
+        2.current issue
+        3.Sale of magzine
+        4.recieve issue
+
+        CHOOSE:
+1
+---------------------------------------------------------------------------------
+
+enter title 
+champak
+enter price of book
+200
+enter copies of books
+50
+Enter no. of copies to be ordered:
+40
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+the title of book is:  champak
+the price of book is: 200.0
+No. of copies of books available are: 50.0
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+total price of copies issued is: 8000.0
+the total sale of publication is 40
+remaining stock of book is:10.0
+---------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+enter number of copies of champak to issue
+5
+Enter date of issue in dd/mm/yyyy
+01/01/2024
+Date of issue of champak:01/01/2024
+Total Magzin issued: 5
+enter number of copies to return
+2
+enter date of Magzin received in format dd/mm/yyyy 
+02/02/2024
+received date of champak:02/02/2024
+Magzin yet to received:3
+remaining stock of Magzin champak is 7.0
+---------------------------------------------------------------------------------
+
+DO YOU WANT TO CONTINUE WITH PUBLICATION???
+        1.CONTINUE      0.TERMINATE
+0
