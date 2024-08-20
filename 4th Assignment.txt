@@ -1,0 +1,78 @@
+import java.util.Scanner;
+abstract class shape{
+	double b;
+	double h;
+	public
+	abstract void accept();
+	abstract void compute_area();
+	abstract void display();
+}
+class triangle extends shape{
+	double ar;
+	public void accept() {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter dimension 'base' of shape triangle: ");
+		b=sc.nextDouble();
+		System.out.println("Enter dimension 'height' of shape triangle:");
+		h=sc.nextDouble();
+	}
+	public void compute_area() {
+		 ar=0.5*b*h;
+	}
+	void display() {
+		System.out.println("Area of triangle is: "+this.ar);
+	}
+}
+class rectangle extends shape{
+	double ar;
+	public void accept() {
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter dimension 'base' of shape rectangle : ");
+	b=sc.nextDouble();
+	System.out.println("Enter dimension 'height' of shape rectangle:");
+	h=sc.nextDouble();
+	}
+	void compute_area() {
+		ar=b*h;
+	}
+	void display() {
+		System.out.println("Area of rectangle is:"+this.ar);
+	}
+}
+
+public class Main {
+
+	public static void main(String[] args) {
+		int n;
+		shape t=new triangle();//this is overriding
+		shape r=new rectangle();
+//		t.accept();
+//		t.compute_area();
+//		t.display();
+//		r.accept();
+//		r.compute_area();
+//		r.display();
+		System.out.println("==============MENU===============");
+		Scanner sc=new Scanner(System.in);
+		System.out.println("\t1. Triangle \n\t2.Rectangle\n");
+		System.out.println("Enter your choice");
+		n=sc.nextInt();
+		switch(n) {
+			case 1 : 
+				System.out.println("=======For Triangle======");
+				t.accept();
+				t.compute_area();
+				t.display();
+				break ;
+			case 2:
+				System.out.println("=======For Rectangle======");
+				r.accept();
+				r.compute_area();
+				r.display();
+				break ;
+			default:
+				System.out.println("invalid");
+		}
+
+	}
+}
