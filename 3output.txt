@@ -1,0 +1,26 @@
+Enter the Employee of choice:
+1.Programmer
+2.Team Lead
+3.Assitant Project Manager
+4.Project Manager
+1
+Enter employee name:
+surya
+Enter employee ID:
+123
+Enter employee address:
+pune
+Enter employee ph.no:
+111111111
+Enter employee mail:
+abc@gmail.com
+---Displaying Details of Programmer---
+Employee name:surya
+Employee ID:123
+Employee ph.no:111111111
+Employee address:pune
+Employee mail:abc@gmail.com
+Enter basic pay:
+10000
+The gross salary is:20700.0
+The net salary is19490.0
