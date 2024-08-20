@@ -1,0 +1,204 @@
+import java.util.Scanner;
+
+class Publication {
+    public String title;
+    public float price;
+    public float copies;
+    public int n;
+    float stock;
+    void accept()
+    {
+        Scanner Sc = new Scanner(System.in);
+        System.out.println("enter title ");
+        this.title = Sc.next();
+        System.out.println("enter price of book");
+        this.price = Sc.nextFloat();
+        System.out.println("enter copies of books");
+        this.copies = Sc.nextInt();
+
+    }
+    void display()
+    {
+        System.out.println("the title of book is:  " + this.title);
+        System.out.println("the price of book is: " + this.price);
+        System.out.println("No. of copies of books available are: " + this.copies);
+    }
+    void sale_copies()
+    {
+        float salec ;
+        if(this.n < this.copies)
+        {
+            salec = this.n * this.price;
+            System.out.println("total price of copies issued is: " + salec);
+            this.stock = this.copies - this.n;
+            System.out.println("the total sale of publication is " + this.n);
+            System.out.println("remaining stock of book is:" + stock);
+        }
+        else
+        {
+            System.out.println("copies you ordered is more than avalable copies");
+        }
+
+    }
+}
+class Books extends Publication
+{ private String Author;
+    void acceptBook()
+    {Scanner Sc = new Scanner (System.in);
+        System.out.println("enter the name of author of book ");
+        Author = Sc.next();
+
+    }
+    void displayBook()
+    {
+        System.out.println("the name of author is: " + this.Author);
+    }
+    void order_copies()
+    {
+        Scanner Sc = new Scanner(System.in);
+        System.out.println("enetr the no. of copies ordered");
+        this.n = Sc.nextInt();
+    }
+}
+class Magzin extends Publication
+{
+
+
+    void orderquantity() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter no. of copies to be ordered:");
+        this.n = sc.nextInt();
+    }
+
+
+    int current_issue()
+    {
+        Scanner Sc = new Scanner(System.in);
+        System.out.println("enter number of copies of " + this.title + " to issue");
+        int current = Sc.nextInt();
+
+        System.out.println("Enter date of issue in dd/mm/yyyy");
+        String date = Sc.next();
+        System.out.println("Date of issue of " + this.title + ":" + date);
+        if(current <=this.stock)
+        {
+            this.stock -= current;
+            System.out.println("Total Magzin issued: " + current);
+        }
+        else
+        {
+            System.out.println("Insufficient Magazines");
+        }
+        return current;
+    }
+    void receive_issue(int current)
+    {
+        Scanner Sc = new Scanner (System.in);
+        System.out.println("enter number of copies to return");
+        int received = Sc.nextInt();
+
+        System.out.println("enter date of Magzin received in format dd/mm/yyyy ");
+        String date = Sc.next();
+        if(received < current)
+        {
+            System.out.println("received date of " + this.title + ":" + date);
+            System.out.println("Magzin yet to received:" + (current-received));
+            System.out.println("remaining stock of Magzin " + this.title +" is " + (this.stock + received));
+        }
+        else
+        {
+            System.out.println("received date of " + this.title + ":" + date);
+        }
+    }
+}
+public class Main {
+    public static void main(String[] args)
+    {
+        Publication P = new Publication();
+        Books B = new Books();
+        Magzin M = new Magzin();
+        Scanner Sc = new Scanner (System.in);
+
+        int outer;
+        do {
+            System.out.println("\n\n CHOOSE ONE OF THE FOLLOWING\n\n\t1.BOOKS\t\t\t2.MAZGZINE");
+            System.out.println("choose: ");
+            int a = Sc.nextInt();
+            int b;
+            int d;
+            bb:
+            if (a == 1)
+                // float co,salec,stock;
+                do {
+                    System.out.println("\n\nCHOOSE ON EOF TE FOLLOWING\n\n\t1.READ BOOK\t\t\t2.DISPLAY BOOK\t\t\t3.SALE COPIES");
+                    System.out.println("CHOOSE: ");
+                    int c = Sc.nextInt();
+                    switch (c) {
+                        case 1:
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                            B.accept();
+                            B.acceptBook();
+                            B.order_copies();
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                        case 2:
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                            B.display();
+                            B.displayBook();
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                        case 3:
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                            B.sale_copies();
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                        default:
+                            System.out.println("invalid");
+                    }
+                    System.out.println("\n\nDO YOU WANT TO CONTINUE WITH BOOK SECTION[1/0]\n\t\t1. YES\t\t\t2.NO");
+                    System.out.println("CHOOSE:");
+                    d = Sc.nextInt();
+                    if (d == 0)
+                        break bb;
+
+
+                } while (d == 1);
+            else if (a == 2) {
+                mm:
+                do {
+                    System.out.println("\n\t\tMENU   FOR   MAGAZINE...\n\n\t1.read magzine\n\t2.current issue\n\t3.Sale of magzine\n\t4.recieve issue");
+                    System.out.println("\n\tCHOOSE:");
+                    int e = Sc.nextInt();
+                    switch (e){
+                        case 1:
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                            M.accept();
+                            M.orderquantity();
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                        case 2:
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                            M.display();
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                        case 3:
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                            M.sale_copies();
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                        case 4:
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                            int current = M.current_issue();
+                            M.receive_issue(current);
+                            System.out.println("---------------------------------------------------------------------------------\n");
+                            break mm;
+
+                    }
+                    System.out.println("DO YOU WANT TO CONTINUE WITH MAGAZINE SECTION [1/0]\n\t1.YES\t0.NO");
+                    System.out.print("\tChoice::");
+                    d = Sc.nextInt();
+                }while(d == 1);
+            }
+            else
+                System.out.println("invalid key....");
+            System.out.println("DO YOU WANT TO CONTINUE WITH PUBLICATION???\n\t1.CONTINUE \t0.TERMINATE");
+            outer=Sc.nextInt();
+        }while(outer!=0);System.out.println("DO YOU WANT TO CONTINUE WITH PUBLICATION???\n\t1.CONTINUE \t0.TERMINATE");
+        outer=Sc.nextInt();
+        Sc.close();
+      }
+  }
